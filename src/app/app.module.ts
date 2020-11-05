@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { UserService } from './user.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+console.log("hihihiih")
 let Routes=[{
 	path:"hi",component:HomeComponentComponent},
 	{path:"login",component:LoginComponent}]
