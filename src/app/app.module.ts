@@ -3,25 +3,28 @@ import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
-import { LoginComponent } from './login/login.component';
+
 import { UserService } from './user.service';
+import { SharedModule } from './shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-console.log("hihihiih")
+
 let Routes=[{
-	path:"hi",component:HomeComponentComponent},
-	{path:"login",component:LoginComponent}]
+	path:"hi",component:HomeComponentComponent}]
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
-    LoginComponent
+
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(Routes),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

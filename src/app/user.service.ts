@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { catchError, tap, map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,17 +9,13 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
 
-  checkUserData1=function(username,password){
- 	// if(username!=1 || password!=2){
- 	// 	setTimeout(function(){ return true }, 3000);
- 	// }else{
- 	// 	setTimeout(function(){ return false }, 3000);
- 	// }
+  checkUserData1=function(value){
 
- 	this.http.get("http://localhost:9000/register").
-    subscribe(data => {
-            console.log(data)
-        })
+ 	// return this.http.post("http://localhost:9000/user/register1",value)
+    return this.http.post("http://localhost:9000/user/register1",value)
+     .pipe(
+       tap(product => console.log(product))
+     );
 
 
  }

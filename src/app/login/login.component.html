@@ -1,4 +1,4 @@
-<form [formGroup]="form" [ngSubmit]=dataSubmit()>
+<form [formGroup]="form" (ngSubmit)=dataSubmit()>
 	username<input type="text" formControlName="username">
 	password<input type="text" formControlName="password">
 	<button type="submit"></button>
