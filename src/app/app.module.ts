@@ -4,13 +4,12 @@ import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 
-import { UserService } from './user.service';
 import { SharedModule } from './shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 let Routes=[{
-	path:"hi",component:HomeComponentComponent}]
+	path:"",component:HomeComponentComponent}]
 
 
 @NgModule({
@@ -26,7 +25,7 @@ let Routes=[{
     ReactiveFormsModule,
     SharedModule
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

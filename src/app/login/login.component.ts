@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from '../user.service'
+import {UserService} from '../services/user.service'
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,11 +25,11 @@ export class LoginComponent implements OnInit {
 
 
     dataSubmit(){
-  	this.UserService.checkUserData1(this.form.value).subscribe(data=>{
-      console.log(data)
-    })
-
-  
+      let result=this.UserService.checkUserData1(this.form.value)
+      console.log(result)
+  	// this.UserService.checkUserData1(this.form.value).subscribe(data=>{
+   //    console.log(data)
+   //  })
   }
   
 

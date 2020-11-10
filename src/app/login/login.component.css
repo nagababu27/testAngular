@@ -1,0 +1,27 @@
+.form-signin {
+  max-width: 330px;
+  
+  margin: 0 auto;
+}
+.wrapper-login {
+   background-image: url('../images/back.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+}
+.container{
+	height : 600px ;
+	padding: 60px;
+/*	width: 33%;
+	vertical-align: middle;
+	border-radius: 25px;*/
+ }
+.container .form-signin{
+	background:rgba(76, 175, 80, 0.3);
+	width: auto;
+}
+
+label{
+	color:#ffffff;
+	font-family: bold
+}
